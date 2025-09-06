@@ -1,0 +1,44 @@
+
+        body {
+            background-color: #f8f9fa;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        .login-card {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            border: none;
+        }
+        .facebook-btn {
+            background-color: #3b5998;
+            color: white;
+        }
+        .facebook-btn:hover {
+            background-color: #344e86;
+            color: white;
+        }
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .divider::before, .divider::after {
+            content: "";
+            flex: 1;
+            border-bottom: 1px solid #ddd;
+        }
+        .divider span {
+            padding: 0 10px;
+            color: #6c757d;
+        }
+
+        .Google-btn {
+            background-color: #e70d0d;
+            color: white;
+        }
+        .facebook-btn:hover {
+            background-color: #e70d0d;
+            color: white;
+        }
+    
