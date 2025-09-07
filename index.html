@@ -1,85 +1,544 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap Login Page</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    
+    <title>ShowTracker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding-bottom: 50px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #e94560;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 8px;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .btn {
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-login {
+            background: transparent;
+            border: 2px solid #e94560;
+            color: #e94560;
+        }
+        
+        .btn-login:hover {
+            background: #e94560;
+            color: white;
+        }
+        
+        .btn-signup {
+            background: #e94560;
+            border: 2px solid #e94560;
+            color: white;
+        }
+        
+        .btn-signup:hover {
+            background: #ff2e63;
+            border-color: #ff2e63;
+        }
+        
+        /* Alphabet Filter */
+        .alphabet-filter {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1px;
+            margin: 10px 0;
+            padding: 0 12px;
+        }
+        
+        .alphabet-btn {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background: rgba(255, 255, 255, 0.1); */
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .alphabet-btn:hover {
+            background: #e94560;
+            transform: translateY(-3px);
+        }
+        
+        /* Genre Filter */
+        .genre-filter {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: left;
+            gap: 5px;
+            margin: 10px 0;
+        }
+        
+        .genre-btn {
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        /* .genre-btn:hover {
+            background: #533483;
+            transform: translateY(-3px);
+        } */
+        
+        /* Search Bar */
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            padding: 5px 20px;
+            width: 100%;
+            max-width: 500px;
+        }
+        
+        .search-box i {
+            color: #a9a9a9;
+            margin-right: 10px;
+        }
+        
+        .search-box input {
+            background: transparent;
+            border: none;
+            color: white;
+            padding: 12px 0;
+            width: 100%;
+            font-size: 16px;
+            outline: none;
+        }
+        
+        .search-box input::placeholder {
+            color: #a9a9a9;
+        }
+        
+        /* Top Shows Section */
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin: 40px 0 30px;
+            color: #fff;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 4px;
+            background: #e94560;
+            border-radius: 2px;
+        }
+        
+        .shows-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .show-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .show-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .show-img {
+            height: 180px;
+            width: 100%;
+            background: linear-gradient(45deg, #0f3460, #533483);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        
+        .show-content {
+            padding: 20px;
+        }
+        
+        .show-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        
+        .show-episodes {
+            color: #a9a9a9;
+            font-size: 14px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .shows-grid {
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            }
+            
+            .alphabet-filter {
+                gap: 5px;
+            }
+            
+            .alphabet-btn {
+                width: 35px;
+                height: 35px;
+                font-size: 14px;
+            }
+            
+            .genre-filter {
+                gap: 8px;
+            }
+            
+            .genre-btn {
+                padding: 6px 12px;
+                font-size: 13px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .shows-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-buttons {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .alphabet-filter {
+                gap: 4px;
+            }
+            
+            .alphabet-btn {
+                width: 30px;
+                height: 30px;
+                font-size: 12px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-tv"></i>
+                    <span>ShowTracker</span>
+                </div>
+                <div class="nav-buttons">
+                    <button class="btn btn-login">Login</button>
+                    <button class="btn btn-signup">Signup</button>
+                </div>
+            </div>
+        </div>
+    </header>
 
-    <div class="row row-cols-1 row-cols-md-2 g-4">
-  <div class="col">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
+    <div class="container">
+        <!-- Alphabet Filter -->
+        <div class="alphabet-filter">
+            <div class="alphabet-btn">0-9</div>
+            <div class="alphabet-btn">A</div>
+            <div class="alphabet-btn">B</div>
+            <div class="alphabet-btn">C</div>
+            <div class="alphabet-btn">D</div>
+            <div class="alphabet-btn">E</div>
+            <div class="alphabet-btn">F</div>
+            <div class="alphabet-btn">G</div>
+            <div class="alphabet-btn">H</div>
+            <div class="alphabet-btn">I</div>
+            <div class="alphabet-btn">J</div>
+            <div class="alphabet-btn">K</div>
+            <div class="alphabet-btn">L</div>
+            <div class="alphabet-btn">M</div>
+            <div class="alphabet-btn">N</div>
+            <div class="alphabet-btn">O</div>
+            <div class="alphabet-btn">P</div>
+            <div class="alphabet-btn">Q</div>
+            <div class="alphabet-btn">R</div>
+            <div class="alphabet-btn">S</div>
+            <div class="alphabet-btn">T</div>
+            <div class="alphabet-btn">U</div>
+            <div class="alphabet-btn">V</div>
+            <div class="alphabet-btn">W</div>
+            <div class="alphabet-btn">X</div>
+            <div class="alphabet-btn">Y</div>
+            <div class="alphabet-btn">Z</div>
+        </div>
 
-  <div class="col">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
+        <!-- Genre Filter -->
+        <div class="genre-filter">
+            <div class="genre-btn">Action</div>
+            <div class="genre-btn">Adventure</div>
+            <div class="genre-btn">Animation</div>
+            <div class="genre-btn">children</div>
+            <div class="genre-btn">Comedy</div>
+            <div class="genre-btn">Crime</div>
+            <div class="genre-btn">Documentary</div>
+            <div class="genre-btn">drama</div>
+            <div class="genre-btn">Family</div>
+            <div class="genre-btn">Fantasy</div>
+            <div class="genre-btn">Food</div>
+            <div class="genre-btn">Home and Garden</div>
+            <div class="genre-btn">Horrer</div>
+            <div class="genre-btn">Mini-Series</div>
+            <div class="genre-btn">Mystery</div>
+            <div class="genre-btn">News</div>
+            <div class="genre-btn">Reality</div>
+            <div class="genre-btn">Romance</div>
+            <div class="genre-btn">Sci-fi</div>
+            <div class="genre-btn">Sport</div>
+            <div class="genre-btn">Suspense</div>
+            <div class="genre-btn">Talk Show</div>
+            <div class="genre-btn">Thriller</div>
+            <div class="genre-btn">Travel</div>
+        </div>
 
-  <div class="row row-cols-1 row-cols-md-2 g-4">
-  <div class="col">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
+       
 
-  <div class="col">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
+        <!-- Top Shows Section -->
+        <h2 class="section-title">TOP 12 SHOWS</h2>
 
-  <div class="col">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-    
-    
+         <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search...">
+            </div>
+        </div>
+        
+        <div class="shows-grid">
+            <!-- Show 1 -->
+            <div class="show-card">
+                <div class="show-img">GAME OF THRONES</div>
+                <div class="show-content">
+                    <h3 class="show-title">Game of Thrones</h3>
+                    <p class="show-episodes">Episode: 84</p>
+                </div>
+            </div>
             
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+            <!-- Show 2 -->
+            <div class="show-card">
+                <div class="show-img">BREAKING BAD</div>
+                <div class="show-content">
+                    <h3 class="show-title">Breaking Bad</h3>
+                    <p class="show-episodes">Episode: 79</p>
+                </div>
+            </div>
+            
+            <!-- Show 3 -->
+            <div class="show-card">
+                <div class="show-img">DEXTER</div>
+                <div class="show-content">
+                    <h3 class="show-title">Dexter</h3>
+                    <p class="show-episodes">Episode: 125</p>
+                </div>
+            </div>
+            
+            <!-- Show 4 -->
+            <div class="show-card">
+                <div class="show-img">HOW I MET YOUR MOTHER</div>
+                <div class="show-content">
+                    <h3 class="show-title">How I Met Your Mother</h3>
+                    <p class="show-episodes">Episode: 219</p>
+                </div>
+            </div>
+            
+            <!-- Additional show cards would go here -->
+            <!-- Show 5 -->
+            <div class="show-card">
+                <div class="show-img">STRANGER THINGS</div>
+                <div class="show-content">
+                    <h3 class="show-title">Stranger Things</h3>
+                    <p class="show-episodes">Episode: 34</p>
+                </div>
+            </div>
+            
+            <!-- Show 6 -->
+            <div class="show-card">
+                <div class="show-img">THE MANDALORIAN</div>
+                <div class="show-content">
+                    <h3 class="show-title">The Mandalorian</h3>
+                    <p class="show-episodes">Episode: 24</p>
+                </div>
+            </div>
+            
+            <!-- Show 7 -->
+            <div class="show-card">
+                <div class="show-img">FRIENDS</div>
+                <div class="show-content">
+                    <h3 class="show-title">Friends</h3>
+                    <p class="show-episodes">Episode: 236</p>
+                </div>
+            </div>
+            
+            <!-- Show 8 -->
+            <div class="show-card">
+                <div class="show-img">THE WITCHER</div>
+                <div class="show-content">
+                    <h3 class="show-title">The Witcher</h3>
+                    <p class="show-episodes">Episode: 16</p>
+                </div>
+            </div>
+            
+            <!-- Show 9 -->
+            <div class="show-card">
+                <div class="show-img">THE OFFICE</div>
+                <div class="show-content">
+                    <h3 class="show-title">The Office</h3>
+                    <p class="show-episodes">Episode: 188</p>
+                </div>
+            </div>
+            
+            <!-- Show 10 -->
+            <div class="show-card">
+                <div class="show-img">LUCIFER</div>
+                <div class="show-content">
+                    <h3 class="show-title">Lucifer</h3>
+                    <p class="show-episodes">Episode: 93</p>
+                </div>
+            </div>
+            
+            <!-- Show 11 -->
+            <div class="show-card">
+                <div class="show-img">THE BOYS</div>
+                <div class="show-content">
+                    <h3 class="show-title">The Boys</h3>
+                    <p class="show-episodes">Episode: 24</p>
+                </div>
+            </div>
+            
+            <!-- Show 12 -->
+            <div class="show-card">
+                <div class="show-img">DARK</div>
+                <div class="show-content">
+                    <h3 class="show-title">Dark</h3>
+                    <p class="show-episodes">Episode: 26</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Simple JavaScript for interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add active class to buttons on click
+            const buttons = document.querySelectorAll('.alphabet-btn, .genre-btn');
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    
+                    // For demonstration, remove active class from siblings
+                    if (this.classList.contains('active')) {
+                        const siblings = Array.from(this.parentElement.children);
+                        siblings.forEach(sib => {
+                            if (sib !== this) {
+                                sib.classList.remove('active');
+                            }
+                        });
+                    }
+                });
+            });
+            
+            // Add hover effect to show cards
+            const showCards = document.querySelectorAll('.show-card');
+            showCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                    this.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.3)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = 'none';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
