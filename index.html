@@ -99,8 +99,11 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 1px;
-            margin: 10px 0;
-            padding: 0 12px;
+            margin: 2px 0;
+            padding:  8px;
+            text-align: center;
+            color: #606162;
+
         }
         
         .alphabet-btn {
@@ -113,7 +116,7 @@
             border-radius: 8px;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s ease;
+            /* transition: all 0.3s ease; */
         }
         
         .alphabet-btn:hover {
@@ -323,33 +326,7 @@
     <div class="container">
         <!-- Alphabet Filter -->
         <div class="alphabet-filter">
-            <div class="alphabet-btn">0-9</div>
-            <div class="alphabet-btn">A</div>
-            <div class="alphabet-btn">B</div>
-            <div class="alphabet-btn">C</div>
-            <div class="alphabet-btn">D</div>
-            <div class="alphabet-btn">E</div>
-            <div class="alphabet-btn">F</div>
-            <div class="alphabet-btn">G</div>
-            <div class="alphabet-btn">H</div>
-            <div class="alphabet-btn">I</div>
-            <div class="alphabet-btn">J</div>
-            <div class="alphabet-btn">K</div>
-            <div class="alphabet-btn">L</div>
-            <div class="alphabet-btn">M</div>
-            <div class="alphabet-btn">N</div>
-            <div class="alphabet-btn">O</div>
-            <div class="alphabet-btn">P</div>
-            <div class="alphabet-btn">Q</div>
-            <div class="alphabet-btn">R</div>
-            <div class="alphabet-btn">S</div>
-            <div class="alphabet-btn">T</div>
-            <div class="alphabet-btn">U</div>
-            <div class="alphabet-btn">V</div>
-            <div class="alphabet-btn">W</div>
-            <div class="alphabet-btn">X</div>
-            <div class="alphabet-btn">Y</div>
-            <div class="alphabet-btn">Z</div>
+                <h5>0-9 <a href="#">A</a> <a href="#">B</a> <a href="#">C</a> <a href="#">D</a> <a href="#">E</a> <a href="#">F</a> <a href="#">G</a> <a href="#">H</a> <a href="#">I</a> <a href="#">J</a> <a href="#">K</a> <a href="#">L</a> <a href="#">M</a> <a href="#">N</a> <a href="#">O</a> <a href="#">P</a> <a href="#">Q</a> <a href="#">R</a> <a href="#">S</a> <a href="#">T</a> <a href="#">U</a> <a href="#">V</a> <a href="#">W</a> <a href="#">X</a> <a href="#">Y</a> <a href="#">Z</a></h5>
         </div>
 
         <!-- Genre Filter -->
@@ -382,19 +359,19 @@
 
        
 
-        <!-- Top Shows Section -->
-        <h2 class="section-title">TOP 12 SHOWS</h2>
+        
 
          <!-- Search Bar -->
         <div class="search-container">
             <div class="search-box">
-                <i class="fas fa-search"></i>
-                <input type="text" placeholder="Search...">
+                <b> TOP 12 SHOW </b>
+                <input type="text"  id="search" placeholder="Search...">
             </div>
         </div>
         
+
         <div class="shows-grid">
-            <!-- Show 1 -->
+            Show 1
             <div class="show-card">
                 <img src="data:image/jpeg;base64,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" alt="game of Thrones
                   ">
