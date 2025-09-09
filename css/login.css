@@ -23,7 +23,7 @@
             background-color: #344e86;
             color: white;
         }
-        .divider {
+         .divider {
             display: flex;
             align-items: center;
             margin: 20px 0;
@@ -35,8 +35,8 @@
         }
         .divider span {
             padding: 0 10px;
-            color: #6c757d;
-        }
+            color: #6c757d; */
+        } 
 
         .Google-btn {
             background-color: #e70d0d;
@@ -50,6 +50,15 @@
             background-color: #e70d0d;
             color: white;
         }
+    
+
+
+
+
+
+        
+        
+        
     
 
 
