@@ -30,12 +30,12 @@ input[type = text]{
 
 .add-moviebtn{
     background-color: #6BA9F7;
-    color: white;  !important
+    color: white;  
     margin-top: 05px;
     margin-bottom: 10px;
     border-radius: 0;
     border: none;
 }
 a{ padding: 5px;
-    
+    color: rgba(92, 90, 90, 0.918);
 margin: 5px;}
