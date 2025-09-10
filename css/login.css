@@ -1,14 +1,11 @@
 
-        body {
-            background-color: #f8f9fa;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-        }
+        
         .login-card {
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             border-radius: 3px;
             border: none;
+            padding: 10px;
+            margin: 50px;
         }
         .facebook-btn {
             width: 100%;
@@ -51,6 +48,8 @@
             color: white;
         }
     
+        a{ padding: 5px;
+margin: 5px;}
 
 
 
