@@ -1,68 +1,48 @@
+.login-card {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border: none;
+    padding: 15px;
+    margin: 25px;
+}
 
-        
-        .login-card {
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            border-radius: 3px;
-            border: none;
-            padding: 15px;
-            margin: 25px;
-        }
-        .facebook-btn {
-            width: 100%;
-        background-color: #3b5998;
-        border-radius: 3px;
-        border: none;
-        height: 50px;
-        color: white;
-           
-        }
-        .facebook-btn:hover {
-            background-color: #344e86;
-            color: white;
-        }
-         .divider {
-            display: flex;
-            align-items: center;
-            margin: 20px 0;
-        }
-        .divider::before, .divider::after {
-            content: "";
-            flex: 1;
-            border-bottom: 1px solid #ddd;
-        }
-        .divider span {
-            padding: 0 10px;
-            color: #6c757d; 
-        } 
+.facebook-btn {
+    width: 100%;
+    background-color: #3b5998;
+    border: none;
+    height: 50px;
+    color: white;
 
-        .Google-btn {
-            background-color: #e70d0d;
-              width: 100%;
-        border-radius: 3px;
-        border: none;
-        height: 50px;
-        color: white;
-        }
-        .facebook-btn:hover {
-            background-color: #e70d0d;
-            color: white;
-        }
-    
-        a{ padding: 5px;
-            color: black;
-margin: 5px;}
+}
 
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
 
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+}
 
+.divider span {
+    padding: 0 10px;
+    color: #6c757d;
+}
 
+.Google-btn {
+    background-color: #e70d0d;
+    width: 100%;
+    border: none;
+    height: 50px;
+    color: white;
+}
+button{border-radius: 0;}
 
-        
-        
-        
-    
-
-
-
-
-
-        
+a {
+    padding: 5px;
+    color: black;
+    margin: 5px;
+}
