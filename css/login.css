@@ -1,48 +1,45 @@
 .login-card {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    border: none;
-    padding: 15px;
-    margin: 25px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border: none;
+  padding: 15px;
+  margin: 25px;
 }
 
 .facebook-btn {
-    width: 100%;
-    background-color: #3b5998;
-    border: none;
-    height: 50px;
-    color: white;
-
+  width: 100%;
+  background-color: #3b5998;
+  border: none;
+  height: 50px;
+  color: white;
 }
 
 .divider {
-    display: flex;
-    align-items: center;
-    margin: 20px 0;
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
 }
 
 .divider::before,
 .divider::after {
-    content: "";
-    flex: 1;
-    border-bottom: 1px solid #ddd;
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ddd;
 }
 
 .divider span {
-    padding: 0 10px;
-    color: #6c757d;
+  padding: 0 10px;
+  color: #6c757d;
 }
 
 .Google-btn {
-    background-color: #e70d0d;
-    width: 100%;
-    border: none;
-    height: 50px;
-    color: white;
+  background-color: #e70d0d;
+  width: 100%;
+  border: none;
+  height: 50px;
+  color: white;
 }
-button{border-radius: 0;}
+button {
+  border-radius: 0;
+}
 
-a {
-    padding: 5px;
-    color: black;
-    margin: 5px;
-}
+a{color: black;}

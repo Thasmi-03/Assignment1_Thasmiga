@@ -13,7 +13,7 @@
 
     <style>
         body {
-            background: #fff;
+            background: #e0dbdb46;
             /* color: #fff; */
             min-height: 100vh;
             padding-bottom: 50px;
@@ -49,7 +49,7 @@
 
         .nav-buttons {
             display: flex;
-            gap: 15px;
+            gap: 5px;
         }
 
         .btn {
@@ -137,7 +137,7 @@
         }
 
         .genre-btn:hover {
-            background: #533483;
+            background: #62517c;
         }
 
         /* Search Bar */
@@ -239,18 +239,20 @@
             margin-bottom: 10px;
             color: #fff;
         }
-
+        .card{border: none;}
         .show-episodes {
             color: #a9a9a9;
             font-size: 14px;
         }
+        p{margin: 0px;
+        padding: 0px;}
     </style>
 </head>
 
 <body>
      <!-- Navigation Start  -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <a class="navbar-brand p-3" href="detail.html"><mark style="background-color: yellow; padding: 30px;">Show<b>Trackr</b></mark></a>
+        <a class="navbar-brand p-3" href="detail.html"><mark style="background-color: yellow; padding: 20px;">Show<b>Trackr</b></mark></a>
         <div class="collapse navbar-collapse" id="navbarScroll">
             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                 <li class="nav-item">
@@ -312,66 +314,55 @@
 
 
 
-
+<div class="total">
 
         <!-- Search Bar -->
-        <div class="search-container">
-            <div class="search-box">
-                <b> TOP 12 SHOW </b>
-                <input type="text" id="search" placeholder="Search...">
-            </div>
-         </div>
-<!-- <div class="col-lg-3 col-md-6- mb-2"> -->
-    
-    
+         <div class="card-header">
+            <b>TOP 12 SHOWS</b>
+            <input type="text" name="text" id="enter-text" placeholder="Search...">
+        </div>
+
         <div class="card-body" id="card-align">
-            <div class="card-group">
-                <div class="card" style="width: 18rem;">
-                    <a href="details.html">
-                    <img src="./asset/game.jpeg" class="card-img-top" alt="..." >
-                    </a>
-                    <div class="card-body">
-                        <a href="details.html">
-                        <p><b>Game of Thrones</b></p>
-                        <p>Episodes:84</p>
-                        </a>
-                    </div>
-                </div>
-
+            <div class="card-group gap-2">
 
                 <div class="card" style="width: 18rem;">
                     <a href="details.html">
-                    <img src="./asset/bad.jpg" class="card-img-top" alt="..." height="87%">
-                        </a>
 
-                    <a href="">
+                    <img src="./asset/game.jpeg" class="card-img-top" alt="..." height="87%">
                     <div class="card-body">
                     <a href="details.html">
+
                         <p><b>Breaking Bad</b></p>
                         <p>Episodes:79</p>
-                        </a>
                     </div>
                 </div>
 
                 <div class="card" style="width: 18rem;">
                     <a href="details.html">
 
-                    <img src="./asset/dexter.jpg" class="card-img-top" alt="..." height="87%">
-                        </a>
+                    <img src="./asset/bad.jpg" class="card-img-top" alt="..." height="87%">
+                    <div class="card-body">
+                    <a href="details.html">
 
+                        <p><b>Breaking Bad</b></p>
+                        <p>Episodes:79</p>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <a href="details.html">
+                    <img src="./asset/dexter.jpg" class="card-img-top" alt="..." height="87%">
                     <div class="card-body">
                     <a href="details.html">
 
                         <p><b>Dexter</b></p>
                         <p>Episodes:125</p>
-                        </a>
-
                     </div>
                 </div>
 
+
                 <div class="card" style="width: 18rem;">
                     <a href="details.html">
-
                     <img src="./asset/mother.jpeg" class="card-img-top" alt="..." height="87%">
                     <div class="card-body">
                     <a href="details.html">
@@ -383,9 +374,8 @@
             </div>
         </div>
 
-
         <div class="card-body" id="card-align">
-            <div class="card-group">
+            <div class="card-group gap-2">
                 <div class="card" style="width: 18rem;">
                     <a href="details.html">
 
@@ -437,9 +427,8 @@
 
 
 
-
         <div class="card-body" id="card-align">
-            <div class="card-group">
+            <div class="card-group gap-2">
                 <div class="card" style="width: 18rem;">
                     <a href="details.html">
                     <img src="./asset/radsasan.jpeg" class="card-img-top" alt="..." height="87%">
@@ -489,7 +478,16 @@
             </div>
         </div>
      
-
+</div>
 </body>
 
 </html>
+
+
+
+ 
+
+
+
+
+
