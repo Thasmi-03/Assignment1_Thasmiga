@@ -60,7 +60,7 @@
           <div class="card login-card">
             <div class="card-body p-5">
               <h2 class="text-center mb-4">Log in</h2>
-              <form>
+              <form id="loginForm">
                 <div class="mb-3">
                   <input
                     type="email"
@@ -68,7 +68,7 @@
                     id="email"
                     placeholder=" &#64; Email"
                   />
-                  <div id="email-Error"></div>
+                 <div id="emailError" class="text-danger" ></div>
                 </div>
 
                 <div class="mb-3">
@@ -78,7 +78,7 @@
                     id="password"
                     placeholder=" &#128273; Password"
                   />
-                  <div id="email-Error"></div>
+                 <div id="passwordError" class="text-danger"></div>
                 </div>
                 <div class="d-grid gap-2">
                   <button type="submit" class="btn btn-success btn-lg">

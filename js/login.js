@@ -6,9 +6,11 @@ loginForm.addEventListener("submit", function (event) {
 
   let isValid = true;
 
+
+
   //  email checked
+  const emailField= document.getElementById("email");
   const emailError = document.getElementById("emailError");
-  const emailField = document.getElementById("enter-Email");
   const emailRegex =
     /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
 
@@ -24,10 +26,15 @@ loginForm.addEventListener("submit", function (event) {
     emailError.style.display = "none";
   }
 
+
+
+
   //   password checked
-  const passwordError = document.getElementById("passwordError");
-  const passwordField = document.getElementById("enter-password");
-  const passwordRegex = /^[a-zA-Z0-9][^?@&]{8}$/;
+
+  const passwordField = document.getElementById("password");
+  const passwordE = document.getElementById("passwordError");
+  const passwordRegex = /^.{8,}$/;
+
 
   if (passwordField.value.trim() === "") {
     isValid = false;
@@ -44,6 +51,6 @@ loginForm.addEventListener("submit", function (event) {
   //    checked
   if (isValid) {
     alert("student register successfully");
-    loginFormForm.reset();
+    loginForm.reset();
   }
 });
