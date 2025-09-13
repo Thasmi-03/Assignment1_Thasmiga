@@ -5,10 +5,9 @@ signupForm.addEventListener("submit", function (event) {
   let isValid = true;
 
   // name checked
-  const nameField= document.getElementById("name");
-  const nameError= document.getElementById("nameError");
+  const nameField = document.getElementById("name");
+  const nameError = document.getElementById("nameError");
   const nameRegex = /^[a-zA-Z\s]{6,}$/;
-
 
   if (nameField.value.trim() === "") {
     isValid = false;
@@ -17,8 +16,7 @@ signupForm.addEventListener("submit", function (event) {
   } else if (!nameRegex.test(nameField.value.trim())) {
     isValid = false;
     nameError.style.display = "block";
-    nameError.innerHTML =
-      "Name may only contain letters and spaces.";
+    nameError.innerHTML = "Name may only contain letters and spaces.";
   } else {
     nameError.style.display = "none";
   }
@@ -44,8 +42,7 @@ signupForm.addEventListener("submit", function (event) {
   const passwordField = document.getElementById("password");
   const passwordError = document.getElementById("passwordError");
   const passwordRegex =
-   /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/
-
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/;
 
   if (passwordField.value.trim() === "") {
     isValid = false;

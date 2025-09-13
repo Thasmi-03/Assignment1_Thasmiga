@@ -4,7 +4,7 @@ body {
 }
 
 div.card {
-  height: 220px;
+  height: 300px;
   width: 90%;
   margin-top: 50px;
   margin-left: 80px;
@@ -50,6 +50,26 @@ a {
 }
 
 .link:hover {
-  /* background: black; */
   border: dotted;
+}
+
+.message {
+  padding: 8px;
+  margin: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: none;
+  width: 50%;
+}
+
+.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
 }

@@ -6,10 +6,8 @@ loginForm.addEventListener("submit", function (event) {
 
   let isValid = true;
 
-
-
   //  email checked
-  const emailField= document.getElementById("email");
+  const emailField = document.getElementById("email");
   const emailError = document.getElementById("emailError");
   const emailRegex =
     /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
@@ -26,15 +24,11 @@ loginForm.addEventListener("submit", function (event) {
     emailError.style.display = "none";
   }
 
-
-
-
   //   password checked
 
   const passwordField = document.getElementById("password");
   const passwordE = document.getElementById("passwordError");
   const passwordRegex = /^.{8,}$/;
-
 
   if (passwordField.value.trim() === "") {
     isValid = false;

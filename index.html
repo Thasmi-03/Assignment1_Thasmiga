@@ -13,7 +13,7 @@
 
     <style>
         body {
-            background: #e0dbdb46;
+            background: rgb(208, 213, 218);
             /* color: #fff; */
             min-height: 100vh;
             padding-bottom: 50px;
@@ -128,7 +128,7 @@
 
         .genre-btn {
             padding: 2px 10px;
-            background: rgba(169, 172, 175, 0.747);
+            background-color: rgba(233, 228, 228, 0.76);
             color: rgb(105, 105, 105);
             border-radius: 5px;
             font-size: 14px;
@@ -136,7 +136,7 @@
         }
 
         .genre-btn:hover {
-            background: #a590c4;
+            background: #e0e3e8c0;
         }
 
       
@@ -194,41 +194,65 @@
     <div class="container">
         <!-- Alphabet Filter -->
         <div class="alphabet-filter">
-            <h5>0-9 <a href="#">A</a> <a href="#">B</a> <a href="#">C</a> <a href="#">D</a> <a href="#">E</a> <a
-                    href="#">F</a> <a href="#">G</a> <a href="#">H</a> <a href="#">I</a> <a href="#">J</a> <a
-                    href="#">K</a> <a href="#">L</a> <a href="#">M</a> <a href="#">N</a> <a href="#">O</a> <a
-                    href="#">P</a> <a href="#">Q</a> <a href="#">R</a> <a href="#">S</a> <a href="#">T</a> <a
-                    href="#">U</a> <a href="#">V</a> <a href="#">W</a> <a href="#">X</a> <a href="#">Y</a> <a
-                    href="#">Z</a></h5>
+         <h5>0-9 
+    <a href="#" class="alpha-btn">A</a>
+    <a href="#" class="alpha-btn">B</a>
+    <a href="#" class="alpha-btn">C</a>
+    <a href="#" class="alpha-btn">D</a>
+    <a href="#" class="alpha-btn">E</a>
+    <a href="#" class="alpha-btn">F</a>
+    <a href="#" class="alpha-btn">G</a>
+    <a href="#" class="alpha-btn">H</a>
+    <a href="#" class="alpha-btn">I</a>
+    <a href="#" class="alpha-btn">J</a>
+    <a href="#" class="alpha-btn">K</a>
+    <a href="#" class="alpha-btn">L</a>
+    <a href="#" class="alpha-btn">M</a>
+    <a href="#" class="alpha-btn">N</a>
+    <a href="#" class="alpha-btn">O</a>
+    <a href="#" class="alpha-btn">P</a>
+    <a href="#" class="alpha-btn">Q</a>
+    <a href="#" class="alpha-btn">R</a>
+    <a href="#" class="alpha-btn">S</a>
+    <a href="#" class="alpha-btn">T</a>
+    <a href="#" class="alpha-btn">U</a>
+    <a href="#" class="alpha-btn">V</a>
+    <a href="#" class="alpha-btn">W</a>
+    <a href="#" class="alpha-btn">X</a>
+    <a href="#" class="alpha-btn">Y</a>
+    <a href="#" class="alpha-btn">Z</a>
+</h5>
+
         </div>
 
         <!-- Genre Filter -->
-        <div class="genre-filter">
-            <div class="genre-btn">Action</div>
-            <div class="genre-btn">Adventure</div>
-            <div class="genre-btn">Animation</div>
-            <div class="genre-btn">children</div>
-            <div class="genre-btn">Comedy</div>
-            <div class="genre-btn">Crime</div>
-            <div class="genre-btn">Documentary</div>
-            <div class="genre-btn">drama</div>
-            <div class="genre-btn">Family</div>
-            <div class="genre-btn">Fantasy</div>
-            <div class="genre-btn">Food</div>
-            <div class="genre-btn">Home and Garden</div>
-            <div class="genre-btn">Horrer</div>
-            <div class="genre-btn">Mini-Series</div>
-            <div class="genre-btn">Mystery</div>
-            <div class="genre-btn">News</div>
-            <div class="genre-btn">Reality</div>
-            <div class="genre-btn">Romance</div>
-            <div class="genre-btn">Sci-fi</div>
-            <div class="genre-btn">Sport</div>
-            <div class="genre-btn">Suspense</div>
-            <div class="genre-btn">Talk Show</div>
-            <div class="genre-btn">Thriller</div>
-            <div class="genre-btn">Travel</div>
-        </div>
+       
+<div class="genre-filter">
+    <div class="genre-btn" data-genre="Action">Action</div>
+    <div class="genre-btn" data-genre="Adventure">Adventure</div>
+    <div class="genre-btn" data-genre="Animation">Animation</div>
+    <div class="genre-btn" data-genre="Children">Children</div>
+    <div class="genre-btn" data-genre="Comedy">Comedy</div>
+    <div class="genre-btn" data-genre="Crime">Crime</div>
+    <div class="genre-btn" data-genre="Documentary">Documentary</div>
+    <div class="genre-btn" data-genre="Drama">Drama</div>
+    <div class="genre-btn" data-genre="Family">Family</div>
+    <div class="genre-btn" data-genre="Fantasy">Fantasy</div>
+    <div class="genre-btn" data-genre="Food">Food</div>
+    <div class="genre-btn" data-genre="Home and Garden">Home and Garden</div>
+    <div class="genre-btn" data-genre="Horror">Horror</div>
+    <div class="genre-btn" data-genre="Mini-Series">Mini-Series</div>
+    <div class="genre-btn" data-genre="Mystery">Mystery</div>
+    <div class="genre-btn" data-genre="News">News</div>
+    <div class="genre-btn" data-genre="Reality">Reality</div>
+    <div class="genre-btn" data-genre="Romance">Romance</div>
+    <div class="genre-btn" data-genre="Sci-fi">Sci-fi</div>
+    <div class="genre-btn" data-genre="Sport">Sport</div>
+    <div class="genre-btn" data-genre="Suspense">Suspense</div>
+    <div class="genre-btn" data-genre="Talk Show">Talk Show</div>
+    <div class="genre-btn" data-genre="Thriller">Thriller</div>
+    <div class="genre-btn" data-genre="Travel">Travel</div>
+</div>
 
 
 
@@ -241,162 +265,146 @@
         </div>
 
         <div class="card-body" id="card-align">
-            <div class="card-group gap-2">
+           <div class="card-group gap-2">
+  <!-- Game of Thrones -->
+  <div class="card" style="width: 18rem;" data-genre="Drama,Adventure" data-name="G">
+    <a href="details.html">
+      <img src="./asset/game.jpeg" class="card-img-top" alt="Game of Thrones" height="87%">
+      <div class="card-body">
+        <p><b>Game of Thrones</b></p>
+        <p>Episodes: 84</p>
+      </div>
+    </a>
+  </div>
 
-                <div class="card" style="width: 18rem;">
-                    <a href="details.html">
+  <!-- Breaking Bad -->
+  <div class="card" style="width: 18rem;" data-genre="Crime,Drama" data-name="B">
+    <a href="details.html">
+      <img src="./asset/bad.jpg" class="card-img-top" alt="Breaking Bad" height="87%">
+      <div class="card-body">
+        <p><b>Breaking Bad</b></p>
+        <p>Episodes: 79</p>
+      </div>
+    </a>
+  </div>
 
-                    <img src="./asset/game.jpeg" class="card-img-top" alt="..." height="87%">
-                    <div class="card-body">
-                    <a href="details.html">
+  <!-- Dexter -->
+  <div class="card" style="width: 18rem;" data-genre="Crime ,Thriller" data-name="D">
+    <a href="details.html">
+      <img src="./asset/dexter.jpg" class="card-img-top" alt="Dexter" height="87%">
+      <div class="card-body">
+        <p><b>Dexter</b></p>
+        <p>Episodes: 125</p>
+      </div>
+    </a>
+  </div>
 
-                        <p><b>Breaking Bad</b></p>
-                        <p>Episodes:79</p>
-                    </div>
-                </div>
-
-                <div class="card" style="width: 18rem;">
-                    <a href="details.html">
-
-                    <img src="./asset/bad.jpg" class="card-img-top" alt="..." height="87%">
-                    <div class="card-body">
-                    <a href="details.html">
-
-                        <p><b>Breaking Bad</b></p>
-                        <p>Episodes:79</p>
-                    </div>
-                </div>
-
-                <div class="card" style="width: 18rem;">
-                    <a href="details.html">
-                    <img src="./asset/dexter.jpg" class="card-img-top" alt="..." height="87%">
-                    <div class="card-body">
-                    <a href="details.html">
-
-                        <p><b>Dexter</b></p>
-                        <p>Episodes:125</p>
-                    </div>
-                </div>
-
-
-                <div class="card" style="width: 18rem;">
-                    <a href="details.html">
-                    <img src="./asset/mother.jpeg" class="card-img-top" alt="..." height="87%">
-                    <div class="card-body">
-                    <a href="details.html">
-
-                        <p><b>How I Met Your Mother</b></p>
-                        <p>Episodes:219</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card-body" id="card-align">
-            <div class="card-group gap-2">
-                <div class="card" style="width: 18rem;">
-                    <a href="details.html">
-
-                    <img src="./asset/kathaippoma.jpeg" class="card-img-top" alt="..." height="87%">
-                    <div class="card-body">
-                    <a href="details.html">
-
-                        <p><b>Kadhaipoma</b></p>
-                        <p>Episodes:12</p>
-                    </div>
-                </div>
-
-                <div class="card" style="width: 18rem;">
-                    <a href="details.html">
-
-                    <img src="./asset/kalluri.jpeg" class="card-img-top" alt="..." height="87%">
-                    <div class="card-body">
-                    <a href="details.html">
-
-                        <p><b>Kalluri Saalai</b></p>
-                        <p>Episodes:10</p>
-                    </div>
-                </div>
-
-                <div class="card" style="width: 18rem;">
-                    <a href="details.html">
-                    <img src="./asset/train.jpeg" class="card-img-top" alt="..." height="87%">
-                    <div class="card-body">
-                    <a href="details.html">
-
-                        <p><b>Train to busan</b></p>
-                        <p>Episodes:01</p>
-                    </div>
-                </div>
-
-
-                <div class="card" style="width: 18rem;">
-                    <a href="details.html">
-                    <img src="./asset/manathili.jpeg" class="card-img-top" alt="..." height="87%">
-                    <div class="card-body">
-                    <a href="details.html">
-
-                        <p><b>Manathili Ninraval</b></p>
-                        <p>Episodes:02</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-        <div class="card-body" id="card-align">
-            <div class="card-group gap-2">
-                <div class="card" style="width: 18rem;">
-                    <a href="details.html">
-                    <img src="./asset/radsasan.jpeg" class="card-img-top" alt="..." height="87%">
-                    <div class="card-body">
-                    <a href="details.html">
-
-                        <p><b>Radsasan</b></p>
-                        <p>Episodes:123</p>
-                    </div>
-                </div>
-
-
-                <div class="card" style="width: 18rem;">
-                    <a href="details.html">
-                    <img src="./asset/thalilippokathe.jpeg" class="card-img-top" alt="..." height="87%">
-                    <div class="card-body">
-                    <a href="details.html">
-
-                        <p><b>Thalilippokathe</b></p>
-                        <p>Episodes:16</p>
-                    </div>
-                </div> 
-
-
-                <div class="card" style="width: 18rem;">
-                    <a href="details.html">
-                    <img src="./asset/hello.png" class="card-img-top" alt="..." height="87%">
-                    <div class="card-body">
-                    <a href="details.html">
-
-                        <p><b>Hello</b></p>
-                        <p>Episodes:21</p>
-                    </div>
-                </div>
-
-
-                <div class="card" style="width: 18rem;">
-                    <a href="details.html">
-                    <img src="./asset/dead.png" class="card-img-top" alt="..." height="87%">
-                    <div class="card-body">
-                    <a href="details.html">
-
-                        <p><b>All of us are dead</b></p>
-                        <p>Episodes:09</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-     
+  <!-- How I Met Your Mother -->
+  <div class="card" style="width: 18rem;" data-genre="Comedy" data-name="H">
+    <a href="details.html">
+      <img src="./asset/mother.jpeg" class="card-img-top" alt="How I Met Your Mother" height="87%">
+      <div class="card-body">
+        <p><b>How I Met Your Mother</b></p>
+        <p>Episodes: 219</p>
+      </div>
+    </a>
+  </div>
 </div>
+
+<div class="card-group gap-2">
+  <!-- Kadhaipoma -->
+  <div class="card" style="width: 18rem;" data-genre="Drama" data-name="K">
+    <a href="details.html">
+      <img src="./asset/kathaippoma.jpeg" class="card-img-top" alt="Kadhaipoma" height="87%">
+      <div class="card-body">
+        <p><b>Kadhaipoma</b></p>
+        <p>Episodes: 12</p>
+      </div>
+    </a>
+  </div>
+
+  <!-- Kalluri Saalai -->
+  <div class="card" style="width: 18rem;" data-genre="Mini-Series" data-name="K">
+    <a href="details.html">
+      <img src="./asset/kalluri.jpeg" class="card-img-top" alt="Kalluri Saalai" height="87%">
+      <div class="card-body">
+        <p><b>Kalluri Saalai</b></p>
+        <p>Episodes: 10</p>
+      </div>
+    </a>
+  </div>
+
+  <!-- Train to Busan -->
+  <div class="card" style="width: 18rem;" data-genre="Horror" data-name="T">
+    <a href="details.html">
+      <img src="./asset/train.jpeg" class="card-img-top" alt="Train to Busan" height="87%">
+      <div class="card-body">
+        <p><b>Train to Busan</b></p>
+        <p>Episodes: 01</p>
+      </div>
+    </a>
+  </div>
+
+  <!-- Manathili Ninraval -->
+  <div class="card" style="width: 18rem;" data-genre="Romance" data-name="M">
+    <a href="details.html">
+      <img src="./asset/manathili.jpeg" class="card-img-top" alt="Manathili Ninraval" height="87%">
+      <div class="card-body">
+        <p><b>Manathili Ninraval</b></p>
+        <p>Episodes: 02</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="card-group gap-2">
+  <!-- Radsasan -->
+  <div class="card" style="width: 18rem;" data-genre="Thriller" data-name="R">
+    <a href="details.html">
+      <img src="./asset/radsasan.jpeg" class="card-img-top" alt="Radsasan" height="87%">
+      <div class="card-body">
+        <p><b>Radsasan</b></p>
+        <p>Episodes: 123</p>
+      </div>
+    </a>
+  </div>
+
+  <!-- M.S. Dhoni: The Untold Story -->
+  <div class="card" style="width: 18rem;" data-genre="Sport" data-name="M">
+    <a href="details.html">
+      <img src="./asset/ms.png" class="card-img-top" alt="ms" height="87%">
+      <div class="card-body">
+        <p><b>M.S. Dhoni: The Untold Story </b></p>
+        <p>Episodes: 16</p>
+      </div>
+    </a>
+  </div>
+
+  <!-- Hello -->
+  <div class="card" style="width: 18rem;" data-genre="Romance" data-name="H">
+    <a href="details.html">
+      <img src="./asset/hello.png" class="card-img-top" alt="Hello" height="87%">
+      <div class="card-body">
+        <p><b>Hello</b></p>
+        <p>Episodes: 21</p>
+      </div>
+    </a>
+  </div>
+
+  <!-- Minmini -->
+  <div class="card" style="width: 18rem;" data-genre="Children,Family,Animation,Adventure" data-name="M">
+    <a href="details.html">
+        <img src="./asset/minmini.png" class="card-img-top" alt="Minmini" height="87%">
+        <div class="card-body">
+            <p><b>Minmini</b></p>
+            <p>Episodes: 01</p>
+        </div>
+    </a>
+</div>
+
+
+</div>
+<script src="js/index .js"></script>
 </body>
 
 </html>

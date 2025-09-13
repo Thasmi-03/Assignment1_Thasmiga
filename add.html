@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add Page</title>
 
     <!-- Bootstrap CDN link -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/add.css">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/add.css" />
+  </head>
 
-<body>
-      
+  <body>
     <!-- Navigation Start -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <a class="navbar-brand p-3" href="detail.html"
@@ -33,7 +35,8 @@
                 class="fw-lighter"
                 aria-current="page"
                 href="index.html"
-                >Home</a >
+                >Home</a
+              >
             </button>
           </li>
           <li class="nav-item">
@@ -43,7 +46,6 @@
           </li>
         </ul>
         <form class="d-flex" role="search">
-       
           <button class="link">
             <a href="login.html" class="fw-lighter">Login</a>
           </button>
@@ -56,24 +58,25 @@
     <!-- End Navigation -->
 
     <div class="card">
-        <div class="card-header">
-            ADD TV SHOWS
-        </div>
-        <div class="card-body">
-            <form action="">
-                <label for="add-movie" class="movie-name my-3">Name</label>
-                <input type="text" name="add-movie" id="add-movie" placeholder="Enter TV show Name">
-                <button type="submit" class="btn btn-primary mb-3 add-moviebtn">Add</button>
-            </form>
-        </div>
+      <div class="card-header">ADD TV SHOWS</div>
+      <div class="card-body">
+        <form action="">
+          <label for="add-movie" class="movie-name my-3">Name</label>
+          <input type="text" id="tvShowName" placeholder="Enter TV show Name" />
+          <div id="messageDisplay" class="message"></div>
+          <button type="button" id="addTvShowBtn" class="btn btn-primary mb-3">
+            Add
+          </button>
+        </form>
+      </div>
     </div>
 
-
     <!-- JS CDN link -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/add.js"></script>
-</body>
-
+  </body>
 </html>

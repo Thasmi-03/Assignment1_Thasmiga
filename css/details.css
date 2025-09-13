@@ -52,7 +52,7 @@
   height: 220px;
   width: 60%;
   margin-top: 40px;
-  margin-left: 300px;
+  margin-left: 380px;
   box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.089);
 }
 .episode-detail {
@@ -72,6 +72,20 @@ a {
 }
 
 .link:hover {
-  /* background: black; */
   border: dotted;
+}
+
+.details-head {
+  position: relative;
+}
+
+.heart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: red;
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  border-radius: 0 0 0 10px;
 }
