@@ -1,24 +1,36 @@
 .card {
-  margin: 10px auto;
-  padding: 10px auto;
+  margin: 10px;
+  height: 100%; /* Let flexbox handle height */
+  min-height: 400px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
 }
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
 .card-search {
   gap: 50px;
 }
 
 .total {
-  margin: 100px;
+  margin: 50px auto;
+  max-width: 1200px;
   background-color: white;
-
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
 }
 
 .card-img-top {
-  height: 350px;
+  height: 300px; /* Fixed height for images */
+  width: 100%;
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 4px 4px 0 0;
 }
 
 .card-header {
@@ -37,6 +49,7 @@
 }
 a {
   color: black;
+  text-decoration: none;
 }
 
 .link {

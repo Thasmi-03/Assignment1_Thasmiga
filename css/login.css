@@ -44,6 +44,7 @@ button {
 
 a {
   color: black;
+  text-decoration: none;
 }
 .link {
   padding: 2px 10px;
